@@ -1,0 +1,11 @@
+<div>
+  <ul>
+    <li *ngFor="let p from products">
+      {{p.name}}<br>
+      <img src="{{p.image}}"><br>
+      {{p.price}}<br>
+      {{p.description}}<br>
+      <a routerLink="stores/:{{p.store.id}}">{{p.store.name}}</a>
+    </li>
+  </ul>
+</div>

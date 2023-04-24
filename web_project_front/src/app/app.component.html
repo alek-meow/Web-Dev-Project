@@ -1,0 +1,24 @@
+<ng-container *ngIf="!logged">
+  <h2>Login form</h2>
+  <div>
+    <fieldset>
+      <label>Username: </label>
+      <input type="text" [(ngModel)]="username">
+   </fieldset>
+    <fieldset>
+      <label>Password: </label>
+      <input type="text" [(ngModel)]="password">
+    </fieldset>
+    <button (click)="login()">Login</button>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="logged">
+  <div>
+    <h2> <a routerLink="/profile">My profile</a></h2>
+    <h2> <a routerLink="/categories">Categories</a></h2>
+    <h2> <a routerLink="/cart">Cart</a></h2>
+    <button (click)="logout()">Logout</button>
+  </div>
+  <router-outlet> </router-outlet>
+</ng-container>
